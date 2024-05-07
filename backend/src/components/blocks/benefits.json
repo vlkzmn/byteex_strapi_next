@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_blocks_benefits",
+  "info": {
+    "displayName": "Benefits",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "where": {
+      "type": "string"
+    },
+    "brands": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

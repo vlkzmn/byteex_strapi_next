@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_saveds",
+  "info": {
+    "displayName": "Saved"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "savedList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    }
+  }
+}

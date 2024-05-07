@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_qn_as",
+  "info": {
+    "displayName": "QnA",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "QnAList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

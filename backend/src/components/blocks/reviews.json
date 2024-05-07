@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_reviews",
+  "info": {
+    "displayName": "Reviews"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.review"
+    },
+    "reviewsButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    }
+  }
+}

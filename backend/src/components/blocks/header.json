@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_blocks_headers",
+  "info": {
+    "displayName": "header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "message": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    },
+    "list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "headerReview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.review"
+    },
+    "reviewTitle": {
+      "type": "string"
+    }
+  }
+}
