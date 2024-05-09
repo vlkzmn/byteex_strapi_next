@@ -20,11 +20,6 @@
     "title": {
       "type": "string"
     },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.button-link"
-    },
     "text": {
       "type": "richtext"
     }

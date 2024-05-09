@@ -34,11 +34,6 @@
         "audios"
       ]
     },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.button-link"
-    },
     "list": {
       "type": "component",
       "repeatable": true,

@@ -9,7 +9,6 @@ export interface BlocksAbout extends Schema.Component {
   attributes: {
     image: Attribute.Media;
     title: Attribute.String;
-    button: Attribute.Component<'elements.button-link'>;
     text: Attribute.RichText;
   };
 }
@@ -38,7 +37,6 @@ export interface BlocksCallToAction extends Schema.Component {
   attributes: {
     title: Attribute.String;
     cards: Attribute.Component<'elements.card', true>;
-    CallToActionButton: Attribute.Component<'elements.button-link'>;
   };
 }
 
@@ -46,12 +44,12 @@ export interface BlocksFooter extends Schema.Component {
   collectionName: 'components_blocks_footers';
   info: {
     displayName: 'Footer';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     image: Attribute.Media;
-    footerButton: Attribute.Component<'elements.button-link'>;
     payment: Attribute.Media;
     footerList: Attribute.Component<'elements.list', true>;
   };
@@ -68,7 +66,6 @@ export interface BlocksHeader extends Schema.Component {
     title: Attribute.String;
     logo: Attribute.Media;
     image: Attribute.Media;
-    button: Attribute.Component<'elements.button-link'>;
     list: Attribute.Component<'elements.list', true>;
     headerReview: Attribute.Component<'elements.review'>;
     reviewTitle: Attribute.String;
@@ -92,13 +89,13 @@ export interface BlocksReviews extends Schema.Component {
   collectionName: 'components_blocks_reviews';
   info: {
     displayName: 'Reviews';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     image: Attribute.Media;
     reviews: Attribute.Component<'elements.review', true>;
-    reviewsButton: Attribute.Component<'elements.button-link'>;
   };
 }
 
@@ -113,24 +110,14 @@ export interface BlocksSaved extends Schema.Component {
   };
 }
 
-export interface ElementsButtonLink extends Schema.Component {
-  collectionName: 'components_elements_button_links';
-  info: {
-    displayName: 'Button link';
-  };
-  attributes: {
-    title: Attribute.String;
-    link: Attribute.String;
-  };
-}
-
 export interface ElementsCard extends Schema.Component {
   collectionName: 'components_elements_cards';
   info: {
     displayName: 'Card';
+    description: '';
   };
   attributes: {
-    icon: Attribute.Media;
+    image: Attribute.Media;
     title: Attribute.String;
     description: Attribute.Text;
   };
@@ -172,7 +159,6 @@ declare module '@strapi/types' {
       'blocks.qn-a': BlocksQnA;
       'blocks.reviews': BlocksReviews;
       'blocks.saved': BlocksSaved;
-      'elements.button-link': ElementsButtonLink;
       'elements.card': ElementsCard;
       'elements.list': ElementsList;
       'elements.review': ElementsReview;
