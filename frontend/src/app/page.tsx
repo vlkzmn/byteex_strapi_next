@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Benefits from "@/components/Benefits";
 import Header from "@/components/Header";
 import { getData } from "@/utils/fetchData";
@@ -21,14 +22,17 @@ export default async function Home() {
     'call-to-action': callToAction, 
     reviews, 
     'qn-a': QnA, 
-    saved, 
+    saved,  
     footer 
   } = await getData();
   
   return (
     <div>
       <Header data={header} />
-      <Benefits data={benefits} />
+      <main>
+        <Benefits data={benefits} />
+        <About data={about} />
+      </main>      
     </div>
   //   <main className="flex min-h-screen flex-col items-center justify-between p-24">
   //     <Header data={header} />

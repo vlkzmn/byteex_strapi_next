@@ -9,11 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        // "gradient-conic":
-        //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-up": "linear-gradient(180deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%)",
-        "gradient-down": "linear-gradient(180deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%)",
+        "gradient-benefits": "linear-gradient(180deg, #F9F0E5 -7.8%, rgba(249, 240, 229, 0.18) 38.6%, rgba(249, 240, 229, 0) 100%)",
+        "gradient-benefits-md": "linear-gradient(180deg, #F9F0E5 -7.8%, rgba(249, 240, 229, 0.18) 38.6%, rgba(249, 240, 229, 0) 72%, rgba(249, 240, 229, 0.7) 100%)",
       },
       colors: {
         "byteex-bage": '#F9F0E5',

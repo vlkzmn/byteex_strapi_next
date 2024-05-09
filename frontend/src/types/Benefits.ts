@@ -21,4 +21,5 @@ export interface BenefitsType {
   images: {
     data: Images[],
   },
+  button: { title: string; link: string; reviewsCount: string };   
 }
