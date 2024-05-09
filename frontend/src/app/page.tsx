@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Benefits from "@/components/Benefits";
 import CallToAction from "@/components/CallToAction";
 import Header from "@/components/Header";
+import Reviews from "@/components/Reviews";
 import { getData } from "@/utils/fetchData";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -34,6 +35,7 @@ export default async function Home() {
         <Benefits data={benefits} />
         <About data={about} />
         <CallToAction data={callToAction} />
+        <Reviews data={reviews} />
       </main>      
     </div>
   //   <main className="flex min-h-screen flex-col items-center justify-between p-24">

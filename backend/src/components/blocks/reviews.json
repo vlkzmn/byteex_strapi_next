@@ -27,6 +27,16 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.review"
+    },
+    "imageMobile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -23,7 +23,7 @@ const populate = {
       },
       reviews: {
         populate: {
-          image: {
+          foto: {
             fields: ["alternativeText", "url"]
           }
         }
@@ -72,6 +72,9 @@ const populate = {
         fields: ["alternativeText", "url"]
       },
       image: {
+        fields: ["alternativeText", "url"]
+      },
+      imageMobile: {
         fields: ["alternativeText", "url"]
       },
       payment: {

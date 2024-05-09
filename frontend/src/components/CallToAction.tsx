@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { CallToActionType } from "@/types/CallToAction";
 import CallToActionSlider from "./CallToActionSlider";
+import Button from "./Button";
 
 export default function CallToAction({ data }: { data: CallToActionType }) {
   return (
@@ -9,7 +10,7 @@ export default function CallToAction({ data }: { data: CallToActionType }) {
         {data.title}
       </h2>
 
-      <div className="hidden min-[680px]:flex justify-between">
+      <div className="hidden min-[680px]:flex justify-between mb-10">
         {data.cards.map(item => (
           <div key={item.title} className="flex flex-col justify-center items-center w-[31%] py-[70px] px-8 bg-byteex-gray even:bg-byteex-bage rounded-lg">
             <div className="w-[70px] h-[70px] flex justify-center items-center">
@@ -30,9 +31,13 @@ export default function CallToAction({ data }: { data: CallToActionType }) {
         ))}
       </div> 
 
-      <div className="min-[680px]:hidden [grid-area:image] justify-self-end mb-[60px] px-5 min-[1000px]:mb-0">
+      <div className="min-[680px]:hidden [grid-area:image] justify-self-end mb-10 px-5">
         <CallToActionSlider cards={data.cards} />
-      </div>     
+      </div>
+
+      <div className="min-[800px]:flex justify-center">
+        <Button text={data.button.title} link={data.button.link} reviewsCount={data.button.reviewsCount} />
+      </div>
     </div>
   )
 }
