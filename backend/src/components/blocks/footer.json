@@ -1,7 +1,8 @@
 {
   "collectionName": "components_blocks_footers",
   "info": {
-    "displayName": "Footer"
+    "displayName": "Footer",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -12,29 +13,26 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "footerButton": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.button-link"
+      ]
     },
     "payment": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "footerList": {
       "type": "component",

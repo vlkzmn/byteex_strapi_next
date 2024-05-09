@@ -388,8 +388,9 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
         'blocks.footer'
       ]
     >;
-    stars: Attribute.Media;
     metaDescription: Attribute.Text;
+    buttonText: Attribute.String;
+    buttonLink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

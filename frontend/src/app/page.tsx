@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Benefits from "@/components/Benefits";
+import CallToAction from "@/components/CallToAction";
 import Header from "@/components/Header";
 import { getData } from "@/utils/fetchData";
 import { Metadata } from "next";
@@ -32,6 +33,7 @@ export default async function Home() {
       <main>
         <Benefits data={benefits} />
         <About data={about} />
+        <CallToAction data={callToAction} />
       </main>      
     </div>
   //   <main className="flex min-h-screen flex-col items-center justify-between p-24">

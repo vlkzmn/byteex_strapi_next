@@ -3,7 +3,6 @@ import Image from "next/image";
 import Button from "./Button";
 
 export default function About({ data }: { data: AboutType }) {
-console.log(data.text.split('\n'));
   return (
     <div className="bg-byteex-gray py-10 min-[800px]:py-[66px]">
       <div className="max-w-[1200px] mx-auto my-0 px-10 block min-[1000px]:grid [grid-template-areas:'image_title'_'image_text'_'image_button']">
