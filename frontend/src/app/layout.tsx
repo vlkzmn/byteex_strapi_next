@@ -17,7 +17,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <body className={`${sofia.className} text-byteex-text-gray`}>{children}</body> */}
       <body className={`${sofia.className}  text-byteex-text-gray`}>{children}</body>
     </html>
   );

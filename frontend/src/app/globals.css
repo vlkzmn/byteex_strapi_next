@@ -21,3 +21,28 @@
     text-wrap: balance;
   }
 }
+
+.swiper-pagination {
+  transform: translateY(10px) !important;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff !important;
+  background: #0f0f10 !important;
+}
+
+/* .swiper-button-prev {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 100%;
+  border: 2px solid black;
+  color: red;
+} */
+
+/* .swiper-button-prev::after {
+  color: black;
+  transform: translateX(-10px);
+}
+
+.swiper-button-next-unique {
+} */

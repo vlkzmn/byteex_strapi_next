@@ -49,7 +49,7 @@ export default function Header({ data }: { data: HeaderType }) {
                     priority
                   />
 
-                  <p className="w-full lg:w-[425px] text-[15px]">
+                  <p className="w-full lg:w-[425px] min-[800px]:w-[350px] text-[15px]">
                     {item.description}
                   </p>
                 </li>
@@ -58,29 +58,32 @@ export default function Header({ data }: { data: HeaderType }) {
 
             <Button text={data.button.title} link={data.button.link} />
 
-            <div className="w-full min-[800px]:w-[416px] mt-11 p-5 rounded-xl border border-byteex-gray-border shadow-byteex-review">
-              <div className="flex justify-between mb-3">
-                <div className="flex items-center gap-3">
+            <div className="relative w-full min-[800px]:w-[416px] mt-11 p-5 rounded-xl border border-byteex-gray-border shadow-byteex-review bg-white z-10">
+              <div className="flex w-full mb-3">
                   <Image
+                    className="mr-4"
                     src={`http://localhost:1337${data.headerReview.foto.data.attributes.url}`}
                     alt={data.headerReview.foto.data.attributes.alternativeText}
                     width={39}
                     height={39}
                   />
-
-                  {data.headerReview.name}
-                </div>
                 
-                <div className="flex items-center gap-2">
-                  <Image
-                    src='/stars.svg'
-                    alt={data.headerReview.foto.data.attributes.alternativeText}
-                    width={60}
-                    height={10}
-                  />
-                  <div className={`${suisse.className} text-[11px] text-byteex-review-gray translate-y-px`}>
-                    {data.reviewTitle}
-                  </div>            
+                <div className="flex flex-col-reverse items-start justify-between gap-0 min-[450px]:flex-row min-[450px]:gap-4 min-[450px]:items-center">
+                  <div>
+                    {data.headerReview.name}
+                  </div>                
+
+                  <div className="flex items-center gap-2 translate-y-[2px]">
+                    <Image
+                      src='/stars.svg'
+                      alt={data.headerReview.foto.data.attributes.alternativeText}
+                      width={60}
+                      height={10}
+                    />
+                    <div className={`${suisse.className} text-[11px] text-byteex-review-gray translate-y-px`}>
+                      {data.reviewTitle}
+                    </div> 
+                  </div>                             
                 </div>            
               </div>
 
@@ -99,37 +102,6 @@ export default function Header({ data }: { data: HeaderType }) {
             priority
           />
         </div>
-
-        {/* <div className="absolute -bottom-20 left-0 w-full min-[800px]:w-[416px] p-5 rounded-xl border border-byteex-gray-border shadow-byteex-review">
-          <div className="flex justify-between items-center mb-3">
-            <div className="flex items-center gap-3">
-              <Image
-                src={`http://localhost:1337${data.headerReview.foto.data.attributes.url}`}
-                alt={data.headerReview.foto.data.attributes.alternativeText}
-                width={39}
-                height={39}
-              />
-
-              {data.headerReview.name}
-            </div>
-            
-            <div className="flex items-center gap-2 translate-y-0.5">
-              <Image
-                src='/stars.svg'
-                alt={data.headerReview.foto.data.attributes.alternativeText}
-                width={60}
-                height={10}
-              />
-              <div className={`${suisse.className} text-[11px] text-byteex-review-gray translate-y-px`}>
-                {data.reviewTitle}
-              </div>            
-            </div>            
-          </div>
-
-          <p className={`${suisse.className} text-xs`}>
-            {data.headerReview.text}
-          </p>
-        </div> */}
       </div>      
     </header>
   );
