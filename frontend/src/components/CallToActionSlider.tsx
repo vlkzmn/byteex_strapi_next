@@ -18,8 +18,8 @@ interface Cards {
 
 export default function CallToActionSlider({ cards }: { cards: Cards[] }) {
   const navigation = {
-    nextEl: '.swiper-button-next-unique',
-    prevEl: '.swiper-button-prev-unique'
+    nextEl: '.swiper-button-next-unique-action',
+    prevEl: '.swiper-button-prev-unique-action'
   }
 
   return (
@@ -51,7 +51,7 @@ export default function CallToActionSlider({ cards }: { cards: Cards[] }) {
         ))}
       </Swiper>
 
-      <div className="swiper-button-next-unique cursor-pointer absolute top-1/2 -translate-x-5">
+      <div className="swiper-button-next-unique-action cursor-pointer absolute top-1/2 -translate-x-5">
         <Image
           src='./arrow-left.svg'
           alt='arrow left'
@@ -60,7 +60,7 @@ export default function CallToActionSlider({ cards }: { cards: Cards[] }) {
         />
       </div>
 
-      <div className="swiper-button-prev-unique cursor-pointer absolute top-1/2 right-0 translate-x-5">
+      <div className="swiper-button-prev-unique-action cursor-pointer absolute top-1/2 right-0 translate-x-5">
         <Image
           src='./arrow-right.svg'
           alt='arrow left'

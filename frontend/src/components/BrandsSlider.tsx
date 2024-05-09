@@ -25,7 +25,7 @@ export default function BrandsSlider({ images }: { images: Images[] }) {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="w-full h-[110px]"
+        className="w-full h-[110px] pt-12 pb-20"
       >
         {images.map(item => (
         <SwiperSlide key={item.attributes.url}>

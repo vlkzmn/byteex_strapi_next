@@ -96,6 +96,7 @@ export interface BlocksReviews extends Schema.Component {
     description: Attribute.Text;
     image: Attribute.Media;
     reviews: Attribute.Component<'elements.review', true>;
+    imageMobile: Attribute.Media;
   };
 }
 
