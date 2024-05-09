@@ -14,7 +14,7 @@ export interface HeaderType {
     description: string;
     image: Image;
   }[];
-  button: { title: string; link: string };
+  button: { title: string; link: string; reviewsCount: string };    
   logo: Image;
   image: Image;
 }

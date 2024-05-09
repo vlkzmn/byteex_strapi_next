@@ -58,39 +58,43 @@ export default function Header({ data }: { data: HeaderType }) {
 
             <Button text={data.button.title} link={data.button.link} />
 
-            <div className="relative w-full min-[800px]:w-[416px] mt-11 p-5 rounded-xl border border-byteex-gray-border shadow-byteex-review bg-white z-10">
-              <div className="flex w-full mb-3">
-                  <Image
-                    className="mr-4"
-                    src={`http://localhost:1337${data.headerReview.foto.data.attributes.url}`}
-                    alt={data.headerReview.foto.data.attributes.alternativeText}
-                    width={39}
-                    height={39}
-                  />
-                
-                <div className="flex flex-col-reverse items-start justify-between gap-0 min-[450px]:flex-row min-[450px]:gap-4 min-[450px]:items-center">
-                  <div>
-                    {data.headerReview.name}
-                  </div>                
-
-                  <div className="flex items-center gap-2 translate-y-[2px]">
+            <div className="relative h-36">
+              <div className="absolute top-0 w-full min-[800px]:w-[416px] mt-11 p-5 rounded-xl border border-byteex-gray-border shadow-byteex-review bg-white z-10">
+                <div className="flex w-full mb-3">
                     <Image
-                      src='/stars.svg'
+                      className="mr-4"
+                      src={`http://localhost:1337${data.headerReview.foto.data.attributes.url}`}
                       alt={data.headerReview.foto.data.attributes.alternativeText}
-                      width={60}
-                      height={10}
+                      width={39}
+                      height={39}
                     />
-                    <div className={`${suisse.className} text-[11px] text-byteex-review-gray translate-y-px`}>
-                      {data.reviewTitle}
-                    </div> 
-                  </div>                             
-                </div>            
-              </div>
+                  
+                  <div className="flex flex-col-reverse items-start justify-between gap-0 min-[450px]:flex-row min-[450px]:gap-4 min-[450px]:items-center">
+                    <div>
+                      {data.headerReview.name}
+                    </div>                
 
-              <p className={`${suisse.className} text-[12px] text-byteex-text-gray leading-[23px]`}>
-                {data.headerReview.text}
-              </p>
+                    <div className="flex items-center gap-2 translate-y-[2px]">
+                      <Image
+                        src='/stars.svg'
+                        alt={data.headerReview.foto.data.attributes.alternativeText}
+                        width={60}
+                        height={10}
+                      />
+                      <div className={`${suisse.className} text-[11px] text-byteex-review-gray translate-y-px`}>
+                        {data.reviewTitle}
+                      </div> 
+                    </div>                             
+                  </div>            
+                </div>
+
+                <p className={`${suisse.className} text-[12px] text-byteex-text-gray leading-[23px]`}>
+                  {data.headerReview.text}
+                </p>
+              </div>
             </div>
+
+            
           </div>
 
           <Image

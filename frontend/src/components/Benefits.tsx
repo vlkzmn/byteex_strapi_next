@@ -2,13 +2,12 @@ import { BenefitsType } from "@/types/Benefits";
 import Image from "next/image";
 import BenefitsSlider from "./BenefitsSlider";
 import BrandsSlider from "./BrandsSlider";
+import Button from "./Button";
 
 export default function Benefits({ data }: { data: BenefitsType }) {
-  console.log(data.brands.data);
   return (
-    <div className="bg-gradient-up w-full -translate-y-[76px]">
+    <div className="bg-gradient-benefits-md min-[1000px]:bg-gradient-benefits w-full pb-16">
       <div className="pt-24">
-      {/* <div className="max-w-[1064px] mx-auto my-0 pt-20"> */}
         <div className="text-center text-xl text-byteex-brands-gray min-[1000px]:mb-6">
           {data.where}
         </div>
@@ -34,9 +33,9 @@ export default function Benefits({ data }: { data: BenefitsType }) {
         
         
         <div className="max-w-[1150px] mx-auto my-0 block px-[56px] [grid-template-areas:'title_image'_'list_image'] min-[1000px]:grid min-[1000px]:px-8">
-          <div className="[grid-area:title] mb-[25px] text-[26px] min-[600px]:text-[32px] text-center leading-10 text-byteex-blue min-[1200px]:mb-[74px] min-[1000px]:text-start">
+          <h2 className="[grid-area:title] mb-[25px] text-[26px] min-[600px]:text-[32px] text-center leading-10 text-byteex-blue min-[1200px]:mb-[74px] min-[1000px]:text-start">
             {data.title}
-          </div>
+          </h2>
 
           <div className="[grid-area:image] justify-self-end mb-[60px] min-[1000px]:mb-0">
             <BenefitsSlider images={data.images.data} />
@@ -65,6 +64,10 @@ export default function Benefits({ data }: { data: BenefitsType }) {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="min-[800px]:hidden mt-10 mx-6">
+          <Button text={data.button.title} link={data.button.link} reviewsCount={data.button.reviewsCount} />
         </div>
       </div>
     </div>

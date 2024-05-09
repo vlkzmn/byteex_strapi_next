@@ -1,0 +1,43 @@
+import { AboutType } from "@/types/About";
+import Image from "next/image";
+import Button from "./Button";
+
+export default function About({ data }: { data: AboutType }) {
+console.log(data.text.split('\n'));
+  return (
+    <div className="bg-byteex-gray py-10 min-[800px]:py-[66px]">
+      <div className="max-w-[1200px] mx-auto my-0 px-10 block min-[1000px]:grid [grid-template-areas:'image_title'_'image_text'_'image_button']">
+        <h2 className="[grid-area:title] mb-8 text-[26px] min-[600px]:text-[32px] text-center leading-10 text-byteex-blue min-[1000px]:text-start min-[1000px]:pl-24 min-[1000px]:mb-5">
+          {data.title}
+        </h2>
+
+        <div className="[grid-area:image] self-center w-full mb-[60px] min-[1000px]:mb-0">
+          <Image
+            className="self-center min-[1000px]:self-start mx-auto"
+            src={`http://localhost:1337${data.image.data.attributes.url}`}
+            alt={data.image.data.attributes.alternativeText}
+            width={524}
+            height={664}
+          />
+        </div>
+
+        <div className="[grid-area:text] flex flex-col gap-5 text-[15px] min-[1000px]:pl-24 min-[1000px]:mb-5 min-[1000px]:max-w-[600px]">
+          {data.text.split('\n').map(item => {
+            if (item) {
+              return (
+                <p key={item}>
+                  {item}
+                </p>
+              );
+            }
+          })}
+        </div>
+
+        <div className="[grid-area:button] hidden pl-24 min-[1000px]:block">
+          <Button text={data.button.title} link={data.button.link} />
+        </div>
+      </div>
+    </div>
+    
+  )
+}
