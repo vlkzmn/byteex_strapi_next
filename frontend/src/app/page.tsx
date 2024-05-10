@@ -4,6 +4,7 @@ import CallToAction from "@/components/CallToAction";
 import Header from "@/components/Header";
 import QuestionAnswer from "@/components/QuestionAnswer";
 import Reviews from "@/components/Reviews";
+import Saved from "@/components/InfoBanner";
 import { getData } from "@/utils/fetchData";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -38,6 +39,7 @@ export default async function Home() {
         <CallToAction data={callToAction} />
         <Reviews data={reviews} />
         <QuestionAnswer data={qna} />
+        <Saved data={saved} />
       </main>      
     </div>
   //   <main className="flex min-h-screen flex-col items-center justify-between p-24">
