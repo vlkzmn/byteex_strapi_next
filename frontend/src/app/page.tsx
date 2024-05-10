@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Benefits from "@/components/Benefits";
 import CallToAction from "@/components/CallToAction";
 import Header from "@/components/Header";
+import QuestionAnswer from "@/components/QuestionAnswer";
 import Reviews from "@/components/Reviews";
 import { getData } from "@/utils/fetchData";
 import { Metadata } from "next";
@@ -23,7 +24,7 @@ export default async function Home() {
     about, 
     'call-to-action': callToAction, 
     reviews, 
-    'qn-a': QnA, 
+    'qn-a': qna, 
     saved,  
     footer 
   } = await getData();
@@ -36,6 +37,7 @@ export default async function Home() {
         <About data={about} />
         <CallToAction data={callToAction} />
         <Reviews data={reviews} />
+        <QuestionAnswer data={qna} />
       </main>      
     </div>
   //   <main className="flex min-h-screen flex-col items-center justify-between p-24">

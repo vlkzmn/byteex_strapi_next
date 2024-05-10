@@ -4,9 +4,8 @@ import { ReviewsSlider, ReviewsSliderMD } from "./ReviewsSlider";
 import Button from "./Button";
 
 export default function Reviews({ data }: { data: ReviewsType }) {
-  console.log(data);
   return (
-    <div className="pb-[110px]">
+    <div className="pb-[68px] min-[800px]:pb-[110px]">
       <h2 className="mb-6 min-[600px]:mb-8 text-[26px] min-[600px]:text-[32px] text-center leading-10 text-byteex-blue">
         {data.title}
       </h2>
