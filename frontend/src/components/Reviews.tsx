@@ -4,8 +4,6 @@ import Button from '@/components/Button';
 import ReviewsType from '@/types/Reviews';
 
 export default function Reviews({ data }: { data: ReviewsType }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
   return (
     <div className="pb-[68px] min-[800px]:pb-[110px]">
       <h2 className="mb-6 min-[600px]:mb-8 text-[26px] min-[600px]:text-[32px] text-center leading-10 text-byteex-blue">
@@ -19,7 +17,7 @@ export default function Reviews({ data }: { data: ReviewsType }) {
       <div className="w-full">
         <Image
           className="mb-[36px] min-[800px]:hidden"
-          src={baseUrl + data.imageMobile.data.attributes.url}
+          src={data.imageMobile.data.attributes.url}
           alt={data.imageMobile.data.attributes.alternativeText}
           width={1264}
           height={628}
@@ -27,7 +25,7 @@ export default function Reviews({ data }: { data: ReviewsType }) {
 
         <Image
           className="hidden min-[800px]:block mb-[76px]"
-          src={baseUrl + data.image.data.attributes.url}
+          src={data.image.data.attributes.url}
           alt={data.image.data.attributes.alternativeText}
           width={4395}
           height={788}

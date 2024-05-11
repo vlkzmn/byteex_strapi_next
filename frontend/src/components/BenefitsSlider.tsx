@@ -9,7 +9,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function BenefitsSlider({ images }: { images: ImageInArray[] }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const navigation = {
     nextEl: '.next-unique-benefits',
     prevEl: '.prev-unique-benefits',
@@ -25,7 +24,7 @@ export default function BenefitsSlider({ images }: { images: ImageInArray[] }) {
         {images.map((item) => (
           <SwiperSlide key={item.attributes.url}>
             <Image
-              src={baseUrl + item.attributes.url}
+              src={item.attributes.url}
               alt={item.attributes.alternativeText}
               width={433}
               height={648}

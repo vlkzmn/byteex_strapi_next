@@ -5,8 +5,6 @@ import Button from '@/components/Button';
 import BenefitsType from '@/types/Benefits';
 
 export default function Benefits({ data }: { data: BenefitsType }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
   return (
     <div className="w-full pb-16 bg-gradient-benefits-up-down min-[1000px]:bg-gradient-benefits-up">
       <div className="pt-24">
@@ -19,7 +17,7 @@ export default function Benefits({ data }: { data: BenefitsType }) {
             {data.brands.data.map((item) => (
               <div key={item.attributes.url} className="w-[200px]">
                 <Image
-                  src={baseUrl + item.attributes.url}
+                  src={item.attributes.url}
                   alt={item.attributes.alternativeText}
                   width={200}
                   height={60}
@@ -50,7 +48,7 @@ export default function Benefits({ data }: { data: BenefitsType }) {
               >
                 <Image
                   className="self-center min-[1000px]:self-start"
-                  src={baseUrl + item.image.data.attributes.url}
+                  src={item.image.data.attributes.url}
                   alt={item.image.data.attributes.alternativeText}
                   width={42}
                   height={42}

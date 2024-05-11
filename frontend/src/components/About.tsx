@@ -4,7 +4,6 @@ import AboutType from '@/types/About';
 
 export default function About({ data }: { data: AboutType }) {
   const textContent = data.text.split('\n').filter((item) => item);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   return (
     <div className="py-10 min-[800px]:py-[66px] bg-byteex-gray ">
@@ -16,7 +15,7 @@ export default function About({ data }: { data: AboutType }) {
         <div className="[grid-area:image] self-center w-full mb-[60px] min-[1000px]:mb-0">
           <Image
             className="self-center min-[1000px]:self-start mx-auto"
-            src={baseUrl + data.image.data.attributes.url}
+            src={data.image.data.attributes.url}
             alt={data.image.data.attributes.alternativeText}
             width={524}
             height={664}

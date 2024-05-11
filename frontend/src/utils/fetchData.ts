@@ -2,11 +2,12 @@ interface Block {
   __component: string;
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL =
+  'https://charming-car-a53a8a9f98.strapiapp.com/api/landing-pages';
 
 export default async function getData() {
   try {
-    const response = await fetch(`${baseUrl}/api/landing-pages`);
+    const response = await fetch(BASE_URL);
     const data = await response.json();
     const blocks = data.data[0].attributes.blocks;
     const result: { [key: string]: any } = {};

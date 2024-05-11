@@ -8,8 +8,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function BrandsSlider({ images }: { images: ImageInArray[] }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
   return (
     <Swiper
       slidesPerView={3}
@@ -24,7 +22,7 @@ export default function BrandsSlider({ images }: { images: ImageInArray[] }) {
         <SwiperSlide key={item.attributes.url}>
           <div className="flex justify-around items-center h-full">
             <Image
-              src={baseUrl + item.attributes.url}
+              src={item.attributes.url}
               alt={item.attributes.alternativeText}
               width={200}
               height={60}

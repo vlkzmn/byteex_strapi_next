@@ -3,8 +3,6 @@ import Button from '@/components/Button';
 import FinalCTAType from '@/types/FinalCTAType';
 
 export default function FinalCTA({ data }: { data: FinalCTAType }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
   return (
     <footer className="flex flex-col items-center py-14 min-[600px]:py-20 bg-gradient-benefits-down">
       <h2 className="mb-4 px-8 text-[26px] min-[600px]:text-[32px] text-center text-byteex-blue">
@@ -17,7 +15,7 @@ export default function FinalCTA({ data }: { data: FinalCTAType }) {
 
       <Image
         className="mb-16"
-        src={baseUrl + data.image.data.attributes.url}
+        src={data.image.data.attributes.url}
         alt={data.image.data.attributes.alternativeText}
         width={815}
         height={383}
@@ -40,7 +38,7 @@ export default function FinalCTA({ data }: { data: FinalCTAType }) {
       <div className="hidden min-[800px]:flex flex-col items-center">
         <Image
           className="mb-8"
-          src={baseUrl + data.payment.data.attributes.url}
+          src={data.payment.data.attributes.url}
           alt={data.payment.data.attributes.alternativeText}
           width={364}
           height={22}
@@ -51,7 +49,7 @@ export default function FinalCTA({ data }: { data: FinalCTAType }) {
             <div key={item.title} className="flex gap-4 px-6">
               <div>
                 <Image
-                  src={baseUrl + item.image.data.attributes.url}
+                  src={item.image.data.attributes.url}
                   alt={item.image.data.attributes.alternativeText}
                   width={33}
                   height={33}

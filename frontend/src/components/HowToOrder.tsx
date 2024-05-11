@@ -1,11 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
 import HowToOrderSlider from '@/components/HowToOrderSlider';
 import Button from '@/components/Button';
 import HowToOrderType from '@/types/HowToOrder';
 
 export default function HowToOrder({ data }: { data: HowToOrderType }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
   return (
     <div className="max-w-[1120px] mx-auto py-[56px] px-8 min-[600px]:py-[76px]">
       <h2 className="mb-6 min-[600px]:mb-[44px] text-[26px] min-[600px]:text-[32px] text-center leading-10 text-byteex-blue">
@@ -18,12 +16,12 @@ export default function HowToOrder({ data }: { data: HowToOrderType }) {
             key={item.title}
             className="flex flex-col justify-center items-center w-[31%] py-[70px] px-8 bg-byteex-gray even:bg-byteex-bage rounded-lg"
           >
-            <div className="flex justify-center items-center w-[70px] h-[70px] ">
-              <img
-                src={baseUrl + item.image.data.attributes.url}
-                alt={item.image.data.attributes.alternativeText}
-              />
-            </div>
+            <Image
+              src={item.image.data.attributes.url}
+              alt={item.image.data.attributes.alternativeText}
+              width={70}
+              height={70}
+            />
 
             <div className="mb-4 text-[22px] text-byteex-blue">
               {item.title}

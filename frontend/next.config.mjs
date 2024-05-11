@@ -4,9 +4,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "1337",
+        protocol: 'https',
+        hostname: 'charming-car-a53a8a9f98.media.strapiapp.com',
+        port: '',
       },
     ],
   },

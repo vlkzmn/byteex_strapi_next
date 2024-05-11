@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import Image from 'next/image';
 import { Image as ImageType } from '@/types/Image';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,7 +14,6 @@ interface Cards {
 }
 
 export default function HowToOrderSlider({ cards }: { cards: Cards[] }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const navigation = {
     nextEl: '.next-unique-order',
     prevEl: '.prev-unique-order',
@@ -33,12 +32,12 @@ export default function HowToOrderSlider({ cards }: { cards: Cards[] }) {
               key={item.title}
               className="flex flex-col justify-center items-center py-[70px] px-8 bg-byteex-gray rounded-lg"
             >
-              <div className="w-[70px] h-[70px] flex justify-center items-center">
-                <img
-                  src={baseUrl + item.image.data.attributes.url}
-                  alt={item.image.data.attributes.alternativeText}
-                />
-              </div>
+              <Image
+                src={item.image.data.attributes.url}
+                alt={item.image.data.attributes.alternativeText}
+                width={70}
+                height={70}
+              />
 
               <div className="mb-4 text-[22px] text-byteex-blue">
                 {item.title}

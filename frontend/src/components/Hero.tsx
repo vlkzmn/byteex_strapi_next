@@ -5,7 +5,6 @@ import { suisse } from '@/utils/fonts/fonts';
 
 export default function Hero({ data }: { data: HeroType }) {
   const messageMd = data.message.split('|')[1];
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   return (
     <header>
@@ -19,7 +18,7 @@ export default function Hero({ data }: { data: HeroType }) {
       <div className="max-w-[1464px] mx-auto my-0 px-5">
         <Image
           className="mx-auto mb-4 min-[800px]:mb-16 min-[800px]:ml-24"
-          src={baseUrl + data.logo.data.attributes.url}
+          src={data.logo.data.attributes.url}
           alt={data.logo.data.attributes.alternativeText}
           width={200}
           height={36}
@@ -34,7 +33,7 @@ export default function Hero({ data }: { data: HeroType }) {
 
             <Image
               className="min-[800px]:hidden mb-6 object-contain"
-              src={baseUrl + data.image.data.attributes.url}
+              src={data.image.data.attributes.url}
               alt={data.image.data.attributes.alternativeText}
               width={725}
               height={445}
@@ -48,7 +47,7 @@ export default function Hero({ data }: { data: HeroType }) {
                   className="flex items-center gap-2.5"
                 >
                   <Image
-                    src={baseUrl + item.image.data.attributes.url}
+                    src={item.image.data.attributes.url}
                     alt={item.image.data.attributes.alternativeText}
                     width={31}
                     height={31}
@@ -69,10 +68,11 @@ export default function Hero({ data }: { data: HeroType }) {
                 <div className="flex w-full mb-3">
                   <Image
                     className="mr-4"
-                    src={baseUrl + data.headerReview.foto.data.attributes.url}
+                    src={data.headerReview.foto.data.attributes.url}
                     alt={data.headerReview.foto.data.attributes.alternativeText}
                     width={39}
                     height={39}
+                    priority
                   />
 
                   <div className="flex flex-col-reverse items-start justify-between gap-0 min-[450px]:flex-row min-[450px]:gap-4 min-[450px]:items-center">
@@ -86,6 +86,7 @@ export default function Hero({ data }: { data: HeroType }) {
                         }
                         width={60}
                         height={10}
+                        priority
                       />
                       <div
                         className={`${suisse.className} text-[11px] text-byteex-review-gray translate-y-px`}
@@ -107,7 +108,7 @@ export default function Hero({ data }: { data: HeroType }) {
 
           <Image
             className="hidden min-[800px]:block mr-8 lg:mr-[62px] object-contain self-start"
-            src={baseUrl + data.image.data.attributes.url}
+            src={data.image.data.attributes.url}
             alt={data.image.data.attributes.alternativeText}
             width={725}
             height={422}
