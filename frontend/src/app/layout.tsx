@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { sofia, suisse } from "@/utils/fonts";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { sofia, suisse } from '@/utils/fonts/fonts';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Byteex",
-  description: "Byteex Landing Page",
+  title: 'Byteex',
+  description: 'Byteex Landing Page',
 };
 
 export default function RootLayout({
@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sofia.className} text-byteex-text-gray`}>{children}</body>
+      <body className={`${sofia.className} text-byteex-text-gray`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,9 +1,12 @@
 import { Image } from './Image';
 
-export default interface AboutType {
+export default interface FAQType {
   title: string;
-  text: string;
   image: Image;
+  list: {
+    title: string;
+    description: string;
+  }[];
   button: {
     title: string;
     link: string;

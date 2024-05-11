@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_blocks_heroes",
+  "info": {
+    "displayName": "Hero"
+  },
+  "options": {},
+  "attributes": {
+    "message": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "reviewTitle": {
+      "type": "string"
+    },
+    "headerReview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.review"
+    },
+    "list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    }
+  }
+}

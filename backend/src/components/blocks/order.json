@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_orders",
+  "info": {
+    "displayName": "Order"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.card"
+    }
+  }
+}

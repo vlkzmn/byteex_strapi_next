@@ -1,8 +1,8 @@
-import { Image } from "./Image";
+import { Image } from './Image';
 
-export interface HeaderType {
-  message: string;
+export default interface HeroType {
   title: string;
+  message: string;
   reviewTitle: string;
   headerReview: {
     name: string;
@@ -10,11 +10,15 @@ export interface HeaderType {
     foto: Image;
   };
   list: {
-    title: string | null;
+    title: string;
     description: string;
     image: Image;
   }[];
-  button: { title: string; link: string; reviewsCount: string };    
+  button: {
+    title: string;
+    link: string;
+    reviewsCount: string;
+  };
   logo: Image;
   image: Image;
 }

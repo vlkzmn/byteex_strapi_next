@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_infos",
+  "info": {
+    "displayName": "Info"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    }
+  }
+}

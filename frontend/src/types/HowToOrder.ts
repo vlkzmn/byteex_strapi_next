@@ -1,9 +1,12 @@
 import { Image } from './Image';
 
-export default interface AboutType {
+export default interface HowToOrderType {
   title: string;
-  text: string;
-  image: Image;
+  cards: {
+    title: string;
+    description: string;
+    image: Image;
+  }[];
   button: {
     title: string;
     link: string;

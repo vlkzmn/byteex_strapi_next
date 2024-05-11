@@ -378,14 +378,15 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
     reviewsCount: Attribute.String;
     blocks: Attribute.DynamicZone<
       [
-        'blocks.header',
         'blocks.benefits',
         'blocks.about',
-        'blocks.call-to-action',
         'blocks.reviews',
-        'blocks.qn-a',
-        'blocks.saved',
-        'blocks.footer'
+        'blocks.footer',
+        'blocks.info',
+        'blocks.hero',
+        'blocks.order',
+        'blocks.faq',
+        'blocks.final'
       ]
     >;
     metaDescription: Attribute.Text;

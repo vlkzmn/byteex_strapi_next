@@ -7,11 +7,6 @@
   "attributes": {
     "title": {
       "type": "string"
-    },
-    "savedList": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.list"
     }
   }
 }

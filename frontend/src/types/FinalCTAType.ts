@@ -1,15 +1,14 @@
 import { Image } from './Image';
 
-export default interface ReviewsType {
+export default interface FinalCTAType {
   title: string;
   description: string;
-  reviews: {
-    name: string;
-    text: string;
-    foto: Image;
-  }[];
-  imageMobile: Image;
   image: Image;
+  payment: Image;
+  list: {
+    title: string;
+    image: Image;
+  }[];
   button: {
     title: string;
     link: string;

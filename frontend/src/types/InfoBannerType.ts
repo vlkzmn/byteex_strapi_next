@@ -1,10 +1,10 @@
-import { Image } from "./Image";
+import { Image } from './Image';
 
-export interface InfoBannerType {
+export default interface InfoBannerType {
   title: string;
-  savedList: {
+  list: {
     title: string;
     description: string;
     image: Image;
-  }[]
+  }[];
 }
