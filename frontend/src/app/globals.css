@@ -2,41 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.swiper-button-unique {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 10px;
+  height: 19px;
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 
-.swiper-pagination-bullet-active {
-  color: #fff !important;
-  background: #0f0f10 !important;
+.icon-next {
+  background-image: url('../../public/arrow-left.svg');
 }
 
-.qa-after-plus-icon::after {
+.icon-prev {
+  background-image: url('../../public/arrow-right.svg');
+}
+
+.faq-after-plus-icon::after {
   display: inline-block;
   position: absolute;
   right: 0;
   top: 5px;
   width: 18px;
   height: 18px;
-  content: "";
-  background-image: url("../../public/plus.svg");
+  content: '';
+  background-image: url('../../public/plus.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.qa-after-minus-icon::after {
+.faq-after-minus-icon::after {
   display: inline-block;
   position: absolute;
   right: 0;
   top: 12px;
   width: 18px;
   height: 4px;
-  content: "";
-  background-image: url("../../public/minus.svg");
+  content: '';
+  background-image: url('../../public/minus.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff !important;
+  background: #0f0f10 !important;
 }
