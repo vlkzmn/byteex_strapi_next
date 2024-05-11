@@ -18,8 +18,6 @@ function Stars() {
   return <Image src="/stars.svg" alt="stars" width={60} height={10} />;
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
 export function ReviewsSlider({ reviews }: { reviews: Review[] }) {
   const navigation = {
     nextEl: '.next-unique-review',
@@ -42,7 +40,7 @@ export function ReviewsSlider({ reviews }: { reviews: Review[] }) {
             >
               <div className="flex items-center gap-4 mb-4">
                 <Image
-                  src={baseUrl + item.foto.data.attributes.url}
+                  src={item.foto.data.attributes.url}
                   alt={item.foto.data.attributes.alternativeText}
                   width={40}
                   height={40}
@@ -94,7 +92,7 @@ export function ReviewsSliderMD({ reviews }: { reviews: Review[] }) {
             >
               <div className="flex items-center gap-4 mb-4">
                 <Image
-                  src={baseUrl + item.foto.data.attributes.url}
+                  src={item.foto.data.attributes.url}
                   alt={item.foto.data.attributes.alternativeText}
                   width={40}
                   height={40}

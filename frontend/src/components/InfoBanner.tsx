@@ -2,8 +2,6 @@ import Image from 'next/image';
 import InfoBannerType from '@/types/InfoBannerType';
 
 export default function InfoBanner({ data }: { data: InfoBannerType }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
   return (
     <div className="min-[650px]:block flex flex-col items-center py-14 min-[800px]:py-10 bg-byteex-gray">
       <h2 className="min-[650px]:mb-8 text-[26px] text-center leading-10 text-byteex-blue">
@@ -18,7 +16,7 @@ export default function InfoBanner({ data }: { data: InfoBannerType }) {
           >
             <div className="flex justify-center mb-2">
               <Image
-                src={baseUrl + item.image.data.attributes.url}
+                src={item.image.data.attributes.url}
                 alt={item.image.data.attributes.alternativeText}
                 width={42}
                 height={42}

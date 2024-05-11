@@ -7,7 +7,6 @@ import Button from '@/components/Button';
 import FAQType from '@/types/FAQ';
 
 export default function FAQ({ data }: { data: FAQType }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const [expandedQuestion, setExpandedQuestion] = useState<null | number>(null);
 
   const toggleAnswer = (index: number) => {
@@ -57,7 +56,7 @@ export default function FAQ({ data }: { data: FAQType }) {
 
       <div className="self-center hidden min-[900px]:block min-[1464px]:mr-[105px] min-[1300px]:mr-[50px]">
         <Image
-          src={baseUrl + data.image.data.attributes.url}
+          src={data.image.data.attributes.url}
           alt={data.image.data.attributes.alternativeText}
           width={430}
           height={636}
