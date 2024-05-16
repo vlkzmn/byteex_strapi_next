@@ -106,14 +106,16 @@ export default function Hero({ data }: { data: HeroType }) {
             </div>
           </div>
 
-          <Image
-            className="hidden min-[800px]:block mr-8 lg:mr-[62px] object-contain self-start"
-            src={data.image.data.attributes.url}
-            alt={data.image.data.attributes.alternativeText}
-            width={725}
-            height={422}
-            priority
-          />
+          <div className="hidden min-[800px]:block">
+            <Image
+              className="mr-8 lg:mr-[62px] object-contain self-start"
+              src={data.image.data.attributes.url}
+              alt={data.image.data.attributes.alternativeText}
+              width={725}
+              height={445}
+              priority
+            />
+          </div>
         </div>
       </div>
     </header>
